@@ -1,0 +1,14 @@
+FROM kalilinux/kali-rolling
+LABEL org.opencontainers.image.authors="githubfoam"
+
+
+RUN set -xe && \
+    export DEBIAN_FRONTEND=noninteractive && \
+    apt-get -qq update && \
+    apt-get -qqy upgrade
+
+RUN set -xe && \
+    apt-get install unicornscan -y
+
+ENTRYPOINT ["unicornscan"]
+CMD ["-h"]
