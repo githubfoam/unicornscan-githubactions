@@ -49,4 +49,4 @@ jobs:
         echo "################## ENTRYPOINT ##################"
         docker run ${name}:${version} -h  
         #get details of open and closed ports of a website
-        docker run ${name}:${version} -r30 -mT geeksforgeeks.org
+        #docker run ${name}:${version} -r30 -mT geeksforgeeks.org
